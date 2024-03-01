@@ -12,5 +12,5 @@ Done with Java, Hibernate, Spring Boot, and  SQL, it simulates the management of
 <br>
  I also have managed the data flow between a user table and a vehicle table, or on the single tables, using Sql queries
  and Hibernate annotations. In addition, I have used extensions such as Spring Security to enable logging in to the website as an admin.
- 
+ <br><br>
 ![Cattura](https://github.com/SuperBona/GT-Super-Cars/assets/122936032/e8c06015-92d0-4eae-b6a7-8e5a098e32ff)
