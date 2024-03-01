@@ -3,8 +3,8 @@ Done with Java, Hibernate, Spring Boot, and  SQL, it simulates the management of
 
  <h2> IMPORTANT </h2>
  The project need to be connected to a local database (I created it in phpMyAdmin), so it's important to have a database where 
- you can run and test the website. You can copy the database name from the "src/main/resources/application.properties" (open with Generic Editor -  Spring properties) and use it in your phpMyAdmin to create the database or change the name in the file and use the one you have choosen. 
- (spring.datasource.url=jdbc:mysql://localhost:3306/concessionariafinale)
+ you can run and test the website. <br>You can copy the database name from the "src/main/resources/application.properties" (open with Generic Editor -  Spring properties) and use it in your phpMyAdmin to create the database or change the name in the file and use the one you have choosen. 
+ <br>(spring.datasource.url=jdbc:mysql://localhost:3306/concessionariafinale)<br>
  Then, run the project with the database opened and you'll se the creation of the tables and the content. To open the website page, use this link:
  "http://localhost:8080/login" and you'll be redirected to the login page.
 
