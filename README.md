@@ -1,7 +1,7 @@
 # GT-Super-Cars
-Done with Java, Hibernate, Spring Boot, and  SQL, it simulates the management of a car/bikes dealership.
+Done with Java, Hibernate, Spring Boot, and  SQL, it simulates the management of a car/bikes dealership (WIP).
 
- * IMPORTANT *
+ <h1> IMPORTANT </h1>
  The project need to be connected to a local database (I created it in phpMyAdmin), so it's important to have a database where 
  you can run and test the website. You can copy the database name from the "src/main/resources/application.properties" (open with Generic Editor -  Spring properties) and use it in your phpMyAdmin to create the database or change the name in the file and use the one you have choosen. Then, 
  run the project with the database opened and you'll se the creation of the tables and the content. To open the website page, use this link:
