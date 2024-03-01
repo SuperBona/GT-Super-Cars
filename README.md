@@ -7,9 +7,9 @@ Done with Java, Hibernate, Spring Boot, and  SQL, it simulates the management of
  <br>(spring.datasource.url=jdbc:mysql://localhost:3306/concessionariafinale)<br>
  Then, run the project with the database opened and you'll se the creation of the tables and the content. To open the website page, use this link:
  "http://localhost:8080/login" and you'll be redirected to the login page.
-
+<br>
  In the project I have implemented various functionalities that perform operations on both the database and the website, such as adding, removing,  modifying data, filtering vehicles according to user preferences, selling and buying, renting vehicles, etc. 
-
+<br>
  I also have managed the data flow between a user table and a vehicle table, or on the single tables, using Sql queries
  and Hibernate annotations. In addition, I have used extensions such as Spring Security to enable logging in to the website as an admin.
  
