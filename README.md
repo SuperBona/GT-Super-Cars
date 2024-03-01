@@ -1,5 +1,5 @@
 # GT-Super-Cars
-Done with Java, Hibernate, Spring Boot, and  SQL, it simulates the management of a car/bikes dealership (WIP).
+Done with Java, Hibernate, Spring Boot, and  SQL, it simulates the management of a car/bikes dealership. Future small changes could be done.
 
  <h2> IMPORTANT </h2>
  The project need to be connected to a local database (I created it in phpMyAdmin), so it's important to have a database where 
