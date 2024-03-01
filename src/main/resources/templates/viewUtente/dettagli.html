@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dettagli utente e veicoli</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <h1>Dettagli utente e veicoli</h1>
+    <h2>Dati utente</h2>
+    <ul>
+        <li>CF: <span th:text="${utente.cF}"></span></li>
+        <li>Nome: <span th:text="${utente.nome}"></span></li>
+        <li>Cognome: <span th:text="${utente.cognome}"></span></li>
+        <li>Data di nascita: <span th:text="${utente.dataDiNascita}"></span></li>
+        <li>Età: <span th:text="${utente.eta}"></span></li>
+    </ul>
+    <h2>Dati veicoli</h2>
+    <div id="veicoli">
+        
+            <ul>
+                <c:forEach var="veicolo" items="${veicoli}">
+                    <li>Id veicolo: <span th:text="${veicolo.id}"></span></li>
+                    <li>Marca: <span th:text="${veicolo.marca}"></span></li>
+                    <li>Modello: <span th:text="${veicolo.modello}"></span></li>
+                    <li>Inizio noleggio: <span th:text="${veicolo.dataInizio}"></span></li>
+                    <li>Fine noleggio: <span th:text="${veicolo.dataFine}"></span></li>
+                    <li>Data vendita: <span th:text="${veicolo.dataVendita}"></span></li>
+                </c:forEach>
+            </ul>
+        
+    </div>
+</body>
+</html>

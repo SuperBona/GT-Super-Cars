@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Sold vehicles filter</title>
+   <style>
+   
+   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&display=swap');
+   
+       body {
+
+           background-image: url("https://wallpapercave.com/wp/wp1919643.jpg");
+            font-family: Garamond(serif), sans-serif;
+  background-image: url("https://digwallpapers.com/wallpapers/full/b/c/f/70121-3840x2160-supercars-wallpaper-image-desktop-4k.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+       }
+       
+     .container {
+  height: 97.8vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  top: 10px;
+  color: white;
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+    }
+    25%, 75% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+    }
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 20px;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 20px;
+}
+    
+       form {
+           text-align: center;
+           margin-top: 20px;
+       }
+ 
+       
+       .card {
+           width: 60rem;
+           margin: auto;
+          background-color: rgba(70, 63, 58, 0.5);
+  border: 2px solid rgba(140, 132, 132, 0.5);
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+           position: center;
+           align-self: center;
+           top: 50rem;
+           border-radius: 1.5rem;
+           box-shadow: 4px 3px 20px #3535358c;
+           display: flex;
+           flex-direction: row;
+       }
+       
+    
+       
+       .logo {
+           object-fit: cover;
+           width: 20em;
+           height: 20em;
+           border-radius: 100%;     
+           transform: scale(1.05);
+           margin-top: 0.4rem;
+       }
+       .menu {
+           width: 35rem;
+           border-bottom-right-radius: 1.5rem;
+           border-top-right-radius: 1.5rem;
+           padding: 1rem 2rem 3rem 3rem;
+       }
+       p {
+           display: block;
+           font-size: 1.1rem;
+           font-weight: 400;
+           margin: .8rem 0;
+       }
+       .inputbox {
+           color: #030303;
+           width: 100%;
+           padding: 0.5rem;
+           border: none;
+           border-bottom: 1.5px solid #ccc;
+           margin-bottom: 1rem;
+           border-radius: 0.3rem;
+           font-family: 'Roboto', sans-serif;
+           color: black;
+           font-size: 1.1rem;
+           font-weight: 500;
+           outline: none;
+       }
+       .data {
+           display: flex;
+           justify-content: space-between;
+           padding-top: 0.6rem;
+       }
+       .data_text {
+           padding-right: 1rem;
+           margin-left: 1rem;
+       }
+       
+     .button {
+   margin-top: 2rem;
+       position: relative;
+      overflow: hidden;
+         background: linear-gradient(135deg, #AC2525 30%, #FF8A8A 100%); 
+         padding: 15px;
+         border: none;
+         border-radius: 50px;
+         color: white;
+         font-weight: 400;
+         font-size: 1.2rem;
+         width: 80%;
+         letter-spacing: 3px;
+         outline: none;
+     }
+     
+     
+     .button:hover {
+     cursor: pointer;
+    }
+     
+     
+     
+    .button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%); 
+    transition: left 0.5s ease-in-out; 
+          }
+          
+          
+ .button:hover::after {
+    left: 100%;
+  }
+  
+       @media only screen and (max-width: 1000px) {
+           .card {
+               flex-direction: column;
+               width: auto;
+           }
+         
+           .menu {
+               width: auto;
+               border-bottom-left-radius: 1.5rem;
+               padding: 0.5rem 3rem 3rem 2rem;
+               border-radius: 0;
+           }
+       }
+   </style>
+</head>
+<body>
+<div class="container">
+   <div class="card">
+       <div class="logo">
+           <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/78/1a/09/781a092d-58f5-42e1-ea19-8c3767c46807/source/512x512bb.jpg" alt="Logo" class="logo">
+       </div>
+       <div class="menu">
+           <form action="filtrovendita" method="post">
+               <h1>Search sold vehicles</h1>
+             
+           
+                <h2>Select dates </h2>
+               <div class="data">
+                   <p class="data_text">From: </p>
+                   <input type="date" class="inputbox" placeholder="Data inizio" name="inizio" th:value="${inizio}"/>
+                   <p class="data_text"> To: </p>
+                   <input type="date" class="inputbox" placeholder="Data fine" name="fine" th:value="${fine}"/>
+               </div>
+               <button type="submit" class="button">Search</button>
+           </form>
+       </div>
+   </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html>
+
+
+<head>
+    <title>GT SUPER CARS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+  /* Variabili di stile */
+ @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&display=swap');
+
+:root {
+  --primary-color: #c42021;
+  --secondary-color: #ffffff;
+  --font-family: sans-serif;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: var(--font-family);
+  color: var(--secondary-color);
+  background-image: url("https://images5.alphacoders.com/121/1216246.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-height: 100vh;
+}
+
+/* Header */
+header {
+
+background-color: #000000bd;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin-right: 10px;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+/* Navbar */
+nav {
+  margin-left: auto;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.nav>.nav-links>a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+}
+
+.nav>#nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav>.nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgba(192, 168, 154, 0.4);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+}
+
+.nav-menu li {
+  margin-right: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  height: auto;
+  background-color: #000000bd;
+  min-width: 160px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+/* Aggiungi questi due selettori al .dropdown-content */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+.dropdown-content li {
+  padding: 10px;
+}
+
+.dropdown-content a {
+  font-size: 14px;
+  display: block;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* User Dropdown */
+
+.user-dropdown {
+  position: relative;
+  margin-left: 20px;
+}
+
+.user-dropdown i {
+  font-size: 20px;
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: black;
+  min-width: 120px;
+  z-index: 1;
+}
+
+/* Aggiungi questi due selettori al .user-dropdown-content */
+.user-dropdown:hover .user-dropdown-content,
+.user-dropdown-content:hover {
+  display: block;
+}
+
+.user-dropdown-content li {
+  padding: 10px;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 71.8vh;
+  padding: 50px 0;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  color: var(--secondary-color);
+  font-size: 46px;
+  margin-top: 50px;
+  margin-bottom: 2rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  animation: flicker 3s infinite;
+  max-width: 90vw;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff;
+  }
+  25%, 75% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff;
+  }
+}
+
+.hero h2 {
+  color: var(--secondary-color);
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #005fa8;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 100%;
+  height: 4rem;
+  background-color: #000000bd;
+  color: var(--secondary-color);
+  padding: 20px 0;
+}
+
+
+    </style>
+</head>
+
+
+<body>
+  <header>
+  
+    <div class="container">
+      <div class="logo">
+        <h1>GT SUPER CARS</h1>
+       
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="/home">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Database</a>
+            <ul class="dropdown-content">
+              <li><a href="/utente/lista">Users List</a></li>
+              <li><a href="/veicolo/lista">Vehicles List</a></li>
+              <li><a href="/veicolo/veicolivenduti">Sold Vehicles</a></li>
+              <li><a href="/veicolo/veicolinoleggiati">Rented Vehicles</a></li>
+            </ul>
+          </li>
+          
+          <li class="dropdown">
+            <a href="#">Register</a>
+            <ul class="dropdown-content">
+              <li><a href="/utente/registrazione">Register User</a></li>
+              <li><a href="/veicolo/registrazione">Register Vehicle</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Delete</a>
+            <ul class="dropdown-content">
+              <li><a href="/utente/rimuoviutente">Delete User</a></li>
+              <li><a href="/veicolo/rimuoviveicolo">Delete Vehicle</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Rental</a>
+            <ul class="dropdown-content">
+         
+              <li><a href="/veicolo/estendinoleggio">Extend Rental</a></li>
+              <li><a href="/veicolo/noleggio">Book Rental</a></li>
+              <li><a href="/veicolo/rientroveicolo">Repossesion</a></li>
+            
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Marketing</a>
+            <ul class="dropdown-content">
+            <!-- <li><a href="/veicolo/registrazione" target="_blank">Buy</a></li> -->
+              <li><a href="/veicolo/vendita" target="_blank">Sell</a></li>
+            </ul>
+          </li>
+          <li class="user-dropdown">
+            <a href="#">
+              <i class="fas fa-user"></i>
+            </a>
+            <ul class="user-dropdown-content">
+              <li><a href="/login">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+         <h1>GT SUPER CARS</h1>
+      <h2>Manage and organize your concessionaire</h2>
+      
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 GT SUPER CARS Concessionaire - All rights reserved</p>
+      
+</div></footer>
+</body>
+
+</html>

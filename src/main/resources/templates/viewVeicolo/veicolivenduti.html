@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>List of sold vehicles</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&display=swap');
+    
+   :root {
+  --primary-color: #c42021;
+  --secondary-color: #ffffff;
+  --font-family: sans-serif;
+}
+
+
+body {
+ font-family: Garamond(serif), sans-serif;
+ background-image: url("https://wallpapercave.com/wp/wp2233494.jpg");
+ background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+height: 90vh;
+}
+
+h1 {
+ color: #D9D0D5;
+ text-align: center;
+ margin-left: -8rem;
+ margin-top: 20px;
+ font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.table-container {
+ width: 90%;
+ margin: 0 auto;
+ overflow-x: auto;
+}
+table {
+ border-collapse: collapse;
+ width: 100%;
+ border-top: 1px solid #EDE0D4;
+  opacity: 0.9;
+}
+th {
+ background-color: #463f3a;
+ color: white;
+ padding: 10px;
+ text-transform: uppercase;
+ border-right: 1px solid #EDE0D4; 
+ border-left: 1px solid #EDE0D4;
+}
+td {
+ background-color: #585758;
+ opacity: 1;
+ color: white;
+ padding: 10px;
+ border-right: 1px solid #333; 
+ border-left: 1px solid #333; 
+}
+
+a {
+ display: block;
+ width: 100px;
+ margin: 20px auto;
+ text-decoration: none;
+}
+
+.btn button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+.btn button:hover {
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.btn {
+    margin-top: 20px; 
+    display: flex; 
+    justify-content: space-between;
+}
+
+   </style>
+</head>
+<body>
+    <h1>Sold Vehicles List</h1>
+    <table class="table-container">
+    <thread>
+        <tr>
+            <th>Id</th>
+            <th>Model</th>
+            <th>Brand</th>
+            <th>Sale Date</th>
+            <th>Purchase Price</th>
+            
+        </tr>
+        </thread>
+        <tbody>
+        <tr th:each="veicolo : ${veicoli}">
+            <td th:text="${veicolo.id}"></td>
+            <td th:text="${veicolo.modello}"></td>
+            <td th:text="${veicolo.marca}"></td>
+            <td th:text="${veicolo.dataVendita}"></td>
+            <td th:text="${veicolo.costoAcquisto}"></td>
+     
+        </tr>
+        </tbody>
+    </table>
+      <div class="btn">
+    <a class="back-to-home" href="/home"><button>Home</button></a>
+     <a class="back-to-home" href="./filtrovendita"><button>Filter</button></a>
+    </div>
+</body>
+</html>

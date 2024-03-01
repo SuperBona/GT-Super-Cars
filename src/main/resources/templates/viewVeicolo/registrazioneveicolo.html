@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> Register vehicle</title>
+  <style>
+    @import url('https://unpkg.com/css.gg@2.0.0/icons/css/home.css');
+   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Garamond(serif), sans-serif;
+      background-image: url("https://getwallpapers.com/wallpaper/full/4/a/e/959849-sport-bikes-wallpapers-1920x1200-images.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      
+    }
+
+    h1 {
+      display: inline-block;
+      position: absolute;
+      margin-top: 1rem;
+      font-family: "Space Mono", monospace;
+      font-weight: 400;
+      font-style: normal;
+      top: 10px;
+      color: white;
+      animation: flicker 3s infinite;
+    }
+    
+          @keyframes flicker {
+            0%, 100% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+            }
+            25%, 75% {
+                text-shadow: none;
+            }
+            50% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
+            }
+        }
+
+    .container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 45%;
+      max-width: 500px;
+      height: 350px;
+     background-color: rgba(70, 63, 58, 0.1);
+      border: 2px solid rgba(140, 132, 132, 0.5);
+      box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 30px;
+      backdrop-filter: blur(4px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position:relative;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      width: 100%; /* Fit grid within card width */
+    }
+
+    .menu {
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+      margin-top: 4rem;
+    }
+
+    .menu h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    input {
+      color: black;
+      width: 100%;
+      height: 2rem;
+      padding: 10px;
+      border: none;
+      border: 1px solid #ccc;
+      border-radius: 0.3rem;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      outline: none;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    
+      form {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     
+     flex-direction: row;
+     width: 60%;
+     }
+     
+ 
+   .button {
+   margin-top: 2rem;
+       position: relative;
+      overflow: hidden;
+         background: linear-gradient(135deg, #622386 40%, #19177B 100%); 
+         padding: 15px;
+         border: none;
+         border-radius: 50px;
+         color: white;
+         font-weight: 400;
+         font-size: 1.2rem;
+         width: 80%;
+         letter-spacing: 3px;
+         outline: none;
+     }
+     
+     .button:hover {
+     cursor: pointer;
+    }
+     
+     
+      /* aggiunge un pseudo-elemento che simula la luce che scorre */
+          .button::after {
+          content: "";
+          position: absolute;
+    top: 0;
+    left: -100%; /* posiziona il pseudo-elemento a sinistra del button */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%); /* crea un gradiente trasparente con una sfumatura bianca al centro */
+    transition: left 0.5s ease-in-out; /* anima il movimento da sinistra a destra */
+          }
+          
+          /* cambia la posizione del pseudo-elemento quando il button è hoverato */
+ .button:hover::after {
+    left: 100%;
+  }
+ .home-button {
+  position: absolute;
+  top:1.6rem;
+  left: 2rem;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color:#622386;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color:#501F5E;
+}
+ 
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+    <a href="/home" class="home-button"> <i class="gg-home"></i>  </a>   
+      <h1>GT SUPER CARS</h1>
+      <div class="menu">
+        <h2>Add a Vehicle</h2>
+        <form action="registrazione" method="post">
+          <!-- aggiunge questa classe per creare una griglia di due colonne -->
+          <div class="grid">
+            <input type="text" name="tipo" placeholder="Type" required/>
+            <input type="text" name="modello" placeholder="Model" required/>
+            <input type="text" name="marca" placeholder="Brand" required/>
+            <input type="number" name="costoAcquisto" placeholder="Purchase Price" required/>
+            <input type="number" name="costoNoleggio" placeholder="Rental Price" required/>
+            <input type="number" name="chilometraggio" placeholder="Kilometres" required/>
+          </div>
+         
+          <div class="center">
+            <button type="submit" class="button">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

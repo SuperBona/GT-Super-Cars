@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Clients List</title>
+   <style>
+ 
+ 
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&display=swap');
+    
+   :root {
+  --primary-color: #c42021;
+  --secondary-color: #ffffff;
+  --font-family: sans-serif;
+}
+
+
+body {
+ font-family: Garamond(serif), sans-serif;
+ background-image: url("https://wallpapercave.com/wp/wp2233396.jpg");
+ background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+height: 90vh;
+}
+
+h1 {
+ color: #E0A422;
+ text-align: center;
+ margin-top: 20px;
+ font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+/*  font-size: 36px; */
+}
+
+.table-container {
+ width: 90%;
+ margin: 0 auto;
+ overflow-x: auto;
+}
+table {
+ border-collapse: collapse;
+ width: 100%;
+ border-top: 1px solid #EDE0D4;
+  opacity: 0.9;
+}
+th {
+ background-color: #463f3a;
+ color: white;
+ padding: 10px;
+ text-transform: uppercase;
+ border-right: 1px solid #EDE0D4; 
+ border-left: 1px solid #EDE0D4;
+}
+td {
+ background-color: #585758;
+ opacity: 1;
+ color: white;
+ padding: 10px;
+ border-right: 1px solid #333; 
+ border-left: 1px solid #333; 
+}
+
+a {
+ display: block;
+ width: 100px;
+ margin: 20px auto;
+ text-decoration: none;
+}
+
+.btn button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+.btn button:hover {
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.btn {
+    margin-top: 20px; 
+    display: flex; 
+    justify-content: space-between;
+}
+
+   </style>
+</head>
+<body>
+   <h1>GTSC Management</h1>
+   <div class="table-container">
+       <table>
+           <thead>
+               <tr>
+                   <th>CF</th>
+                   <th>Name</th>
+                   <th>Surname</th>
+                   <th>Birth Data</th>
+                   <th>Age</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr th:each="utente: ${utenti}">
+                   <td th:text="${utente.cF}">cf</td>
+                   <td th:text="${utente.nome}">Name</td>
+                   <td th:text="${utente.cognome}">Surname</td>
+                   <td th:text="${utente.dataDiNascita}">Birth Date</td>
+                   <td th:text="${utente.eta}">Age</td>
+               </tr>
+           </tbody>
+       </table>
+   </div>
+   <div class="btn">
+   <a class="registration-btn" href="./registrazione"><button>Add</button></a>
+   <a class="delete-btn" href="./rimuoviutente"><button>Remove</button></a>
+    <a class="back-to-home" href="/home"><button>Home</button></a>
+     <a class="modify-btn" href="./modificautente"><button>Modify</button></a>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Extend rental</title>
+   <style>
+    @import url('https://unpkg.com/css.gg@2.0.0/icons/css/home.css');
+      @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Garamond(serif), sans-serif;
+  background-image: url("https://getwallpapers.com/wallpaper/full/b/1/d/763909-most-popular-motorcycle-wallpaper-1920x1080.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 45%;
+  max-width: 500px;
+  height: 300px;
+   background-color: rgba(70, 63, 58, 0.6);
+      border: 2px solid rgba(140, 132, 132, 0.5);
+      box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+
+
+.card h1 {
+  color: white;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+    }
+    25%, 75% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+    }
+}
+
+/*@keyframes flicker {
+            0%, 100% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+            }
+            50% {
+                text-shadow: none;
+            }
+        }*/
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.menu h2 {
+  text-align: center;
+  color: white;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.inputbox {
+  color: black;
+  width: 100%;
+  height: 2.5rem;
+  padding: 10px;
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  outline: none;
+}
+
+.data {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.data_text {
+  margin-bottom: 0.5rem;
+  color: white;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    .button {
+margin-left: 2.5rem;
+   margin-top: 2rem;
+       position: relative;
+      overflow: hidden;
+         background: linear-gradient(135deg, #AC2525 30%, #FF8A8A 100%); 
+         padding: 15px;
+         border: none;
+         border-radius: 50px;
+         color: white;
+         font-weight: 400;
+         font-size: 1.2rem;
+         width: 80%;
+         letter-spacing: 3px;
+         outline: none;
+     }
+     
+     
+     .button:hover {
+     cursor: pointer;
+    }
+     
+     
+     
+    .button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+     background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%); 
+    transition: left 0.5s ease-in-out; 
+          }
+          
+          
+ .button:hover::after {
+    left: 100%;
+  }
+  
+  .inputbox,
+.inputbox option {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Opzioni di select */
+
+.inputbox option:hover {
+  background-color: #ddd;
+}
+
+/* Select */
+
+.inputbox {
+  height: 35px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='none' stroke='%23ccc' stroke-width='1' d='M4 7L8 11L12 7'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 16px 16px;
+}
+
+/* Focus su input e select */
+
+.inputbox:focus,
+.inputbox:active {
+  border-color: #999;
+}
+.home-button {
+  position: absolute;
+  top:1.5rem;
+  left: 2rem;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color:#AC2525;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color:#A72A2A;
+}
+
+   </style>
+</head>
+<body>
+   <div class="container">
+         <div class="card">
+          <a href="/home" class="home-button"> <i class="gg-home"></i>  </a>   
+      <h1>GT SUPER CARS</h1>
+           <div class="menu">
+               <form action="filtrotipo" method="post">
+                   <h2>Filter vehicle by tipe</h2>
+                   <select class="inputbox" name="veicolo">
+                       <option value="">--Select vehicle--</option>
+  <option th:value="car">Car</option>
+  <option th:value="motorcycle">Motorcycle</option>       
+   </select>                  
+ <button type="submit" class="button">Search</button>
+             </form>
+           </div>
+         </div>
+       </div>   
+</body>
+</html>
